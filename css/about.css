@@ -1,0 +1,37 @@
+.about-hero {
+  background: var(--gradient-hero);
+  padding-top: 8rem;
+  padding-bottom: var(--space-3xl);
+}
+
+.about-hero h1 {
+  color: var(--color-snow);
+  font-size: var(--text-h1);
+  max-width: 760px;
+  margin-bottom: var(--space-md);
+}
+
+.about-hero p {
+  color: var(--color-mist);
+  font-size: var(--text-body-lg);
+  max-width: 640px;
+}
+
+.about-story {
+  max-width: 760px;
+}
+
+.about-story p {
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-body-lg);
+}
+
+.values-grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 720px) {
+  .values-grid { grid-template-columns: repeat(3, 1fr); }
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Keyframe animations
+   ========================================================================== */
+
+@keyframes btn-pulse {
+  0%, 90%, 100% { transform: scale(1); }
+  95% { transform: scale(1.02); }
+}
+
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.typewriter__cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 4px;
+  background: var(--color-electric);
+  animation: cursor-blink 1s step-start infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-mesh {
+  background-size: 200% 200%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+/* Staggered cascade helper — pair with .reveal, set via inline style or nth-child */
+.stagger > * {
+  transition-delay: calc(var(--stagger-index, 0) * 100ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn--pulse,
+  .gradient-mesh,
+  .typewriter__cursor {
+    animation: none;
+  }
+}

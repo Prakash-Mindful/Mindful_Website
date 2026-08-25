@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Mindful Tech Solutions</title>
+  <meta name="description" content="Get in touch with Mindful Tech Solutions to discuss a product demo or a custom IT solution." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/css/design-system.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/animations.css" />
+  <link rel="stylesheet" href="/css/contact.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="/" class="nav__logo">
+      <img src="/assets/logo.png" alt="Mindful Tech Solutions" onerror="this.style.display='none'" />
+      Mindful Tech Solutions
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/" class="nav__link">Home</a>
+      <div class="nav__dropdown">
+        <button class="nav__link" aria-haspopup="true">Products</button>
+        <div class="nav__dropdown-menu">
+          <a href="/products.html#restops-360" class="nav__dropdown-item">RestOps 360</a>
+          <a href="/products.html#proforma-os" class="nav__dropdown-item">Proforma OS</a>
+          <a href="/products.html#crew-os" class="nav__dropdown-item">Crew OS</a>
+          <a href="/products.html#upcoming" class="nav__dropdown-item">Upcoming Products</a>
+        </div>
+      </div>
+      <div class="nav__dropdown">
+        <button class="nav__link" aria-haspopup="true">Services</button>
+        <div class="nav__dropdown-menu">
+          <a href="/services.html#ai-automation" class="nav__dropdown-item">AI Automation &amp; Agentic Systems</a>
+          <a href="/services.html#saas-engineering" class="nav__dropdown-item">SaaS &amp; Product Engineering</a>
+          <a href="/services.html#custom-software" class="nav__dropdown-item">Custom Software Development</a>
+          <a href="/services.html#cloud-devops" class="nav__dropdown-item">Cloud, DevOps &amp; Infrastructure</a>
+          <a href="/services.html#managed-it" class="nav__dropdown-item">Managed IT &amp; Support</a>
+          <a href="/services.html#it-staffing" class="nav__dropdown-item">IT Staffing &amp; Consulting</a>
+        </div>
+      </div>
+      <a href="/industries.html" class="nav__link">Industries</a>
+      <a href="/about.html" class="nav__link">About</a>
+      <a href="/contact.html" class="nav__link">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a href="/products.html" class="btn btn--secondary">Explore Products</a>
+      <a href="/contact.html" class="btn btn--primary">Let's Talk</a>
+    </div>
+    <button class="nav__toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" data-mobile-menu>
+    <a href="/" class="mobile-menu__link">Home</a>
+    <a href="/products.html" class="mobile-menu__link">Products</a>
+    <a href="/services.html" class="mobile-menu__link">Services</a>
+    <a href="/industries.html" class="mobile-menu__link">Industries</a>
+    <a href="/about.html" class="mobile-menu__link">About</a>
+    <a href="/contact.html" class="mobile-menu__link">Contact</a>
+    <a href="/contact.html" class="btn btn--primary" style="margin-top: 1rem;">Let's Talk</a>
+  </div>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Have an old process that needs a smarter system?</h1>
+        <p>Tell us about it — we'll follow up within one business day.</p>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container contact-layout">
+        <form class="contact-form reveal" data-contact-form novalidate>
+          <div class="form-row form-row--2">
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </div>
+          <div class="form-row form-row--2">
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" />
+            </div>
+            <div class="form-field">
+              <label for="interest">What are you interested in?</label>
+              <select id="interest" name="interest">
+                <option value="products">Products (RestOps 360 / Proforma OS / Crew OS)</option>
+                <option value="services">Custom IT Services</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+          <p class="form-status" data-form-status role="status"></p>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-info__item reveal">
+            <h3>Email</h3>
+            <p><a href="mailto:hello@mindfultechsol.com">hello@mindfultechsol.com</a></p>
+          </div>
+          <div class="contact-info__item reveal">
+            <h3>Book a Consultation</h3>
+            <p>Prefer to talk it through? <a href="mailto:hello@mindfultechsol.com?subject=Consultation%20Request">Request a time</a> and we'll send a link.</p>
+          </div>
+          <div class="contact-info__item reveal">
+            <h3>Response Time</h3>
+            <p>We reply to every inquiry within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Mindful Tech Solutions</p>
+          <p>Any IT challenge. One mindful solution.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Products</p>
+          <a href="/products.html#restops-360" class="footer__link">RestOps 360</a>
+          <a href="/products.html#proforma-os" class="footer__link">Proforma OS</a>
+          <a href="/products.html#crew-os" class="footer__link">Crew OS</a>
+        </div>
+        <div>
+          <p class="footer__heading">Company</p>
+          <a href="/about.html" class="footer__link">About</a>
+          <a href="/industries.html" class="footer__link">Industries</a>
+          <a href="/contact.html" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <p class="footer__heading">Services</p>
+          <a href="/services.html" class="footer__link">All Services</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; <span data-current-year>2026</span> Mindful Tech Solutions. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/contact-form.js"></script>
+</body>
+</html>
