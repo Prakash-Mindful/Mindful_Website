@@ -1,61 +1,60 @@
 /* ==========================================================================
    Mindful Tech Solutions — Design System
-   Tokens, reset, and utility classes. "Midnight Aurora" palette.
+   Tokens, reset, and utility classes. Monochrome studio palette, one accent.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 :root {
-  /* Color — dark surfaces */
-  --color-void: #0a0a0f;
-  --color-obsidian: #111118;
-  --color-slate: #1a1a24;
-  --color-steel: #2a2a3a;
-  --color-mist: #8888a0;
+  /* Color — dark surfaces (warm near-black, not cold navy) */
+  --color-void: #0d0d0c;
+  --color-obsidian: #141412;
+  --color-slate: #1c1c19;
+  --color-steel: #333229;
+  --color-mist: #9a988e;
 
-  /* Color — light surfaces */
-  --color-cloud: #f4f4f8;
-  --color-snow: #ffffff;
-  --color-ink: #14141c;
-  --color-ink-muted: #57576b;
-  --color-border-light: rgba(10, 10, 20, 0.08);
+  /* Color — light surfaces (warm paper, not stark white) */
+  --color-cloud: #efeee8;
+  --color-snow: #faf9f6;
+  --color-ink: #100f0d;
+  --color-ink-muted: #6b6a63;
+  --color-border-light: rgba(13, 13, 12, 0.12);
 
-  /* Color — accents */
-  --color-electric: #00d4ff;
-  --color-neon: #7c3aed;
-  --color-ember: #ff6b2b;
+  /* Color — single restrained accent (used sparingly, per the brief) */
+  --color-electric: #d9591c;
+  --color-neon: #d9591c;
+  --color-ember: #d9591c;
   --color-success: #22c55e;
 
-  /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #0a0a0f 0%, #1a1035 50%, #0a0a0f 100%);
-  --gradient-accent: linear-gradient(135deg, #00d4ff, #7c3aed);
-  --gradient-ember: linear-gradient(135deg, #ff6b2b, #7c3aed);
+  /* Gradients — tonal only, never a second hue */
+  --gradient-hero: linear-gradient(135deg, #0d0d0c 0%, #1c1a16 50%, #0d0d0c 100%);
+  --gradient-accent: linear-gradient(135deg, #e2661f, #c14a12);
+  --gradient-ember: linear-gradient(135deg, #e2661f, #c14a12);
 
   /* Borders / glass */
-  --border-dark: rgba(255, 255, 255, 0.06);
-  --border-light: rgba(0, 0, 0, 0.06);
-  --border-dark-hover: rgba(0, 212, 255, 0.35);
-  --border-light-hover: rgba(124, 58, 237, 0.28);
+  --border-dark: rgba(250, 249, 246, 0.1);
+  --border-light: rgba(13, 13, 12, 0.1);
+  --border-dark-hover: rgba(217, 89, 28, 0.5);
+  --border-light-hover: rgba(217, 89, 28, 0.45);
 
-  /* Shadows — layered and tinted toward the brand accent, never flat black */
-  --shadow-card: 0 1px 2px rgba(10, 6, 20, 0.06), 0 12px 28px -8px rgba(31, 12, 60, 0.16);
-  --shadow-card-hover: 0 2px 4px rgba(10, 6, 20, 0.08), 0 24px 48px -12px rgba(31, 12, 60, 0.28);
-  --shadow-card-dark: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 40px -8px rgba(0, 0, 0, 0.45);
-  --shadow-card-dark-hover: 0 2px 4px rgba(0, 0, 0, 0.35), 0 28px 56px -12px rgba(76, 29, 149, 0.35);
-  --shadow-glow: 0 0 1px rgba(0, 212, 255, 0.8), 0 0 32px rgba(0, 212, 255, 0.28), 0 8px 24px -6px rgba(124, 58, 237, 0.35);
+  /* Shadows — flat and quiet; hairlines carry the structure, not blur */
+  --shadow-card: 0 1px 2px rgba(13, 13, 12, 0.04);
+  --shadow-card-hover: 0 2px 4px rgba(13, 13, 12, 0.06), 0 16px 32px -16px rgba(13, 13, 12, 0.18);
+  --shadow-card-dark: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-card-dark-hover: 0 2px 4px rgba(0, 0, 0, 0.25), 0 16px 32px -16px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 1px 2px rgba(13, 13, 12, 0.15), 0 12px 24px -10px rgba(217, 89, 28, 0.35);
   --blur-glass: 20px;
 
-  /* Subtle film-grain noise for tactile depth on dark surfaces */
+  /* Subtle film-grain — paper texture, fits the editorial direction */
   --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
-  /* Typography */
+  /* Typography — an expanded grotesk for display, quiet workhorse for body */
+  --font-display: 'Archivo', system-ui, sans-serif;
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
-  --text-hero: clamp(2.5rem, 5vw, 4.5rem);
-  --text-h1: clamp(2rem, 4vw, 3.5rem);
-  --text-h2: clamp(1.5rem, 3vw, 2.5rem);
-  --text-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --text-hero: clamp(2rem, 8vw, 5.25rem);
+  --text-h1: clamp(1.75rem, 6vw, 3.75rem);
+  --text-h2: clamp(1.5rem, 4.5vw, 2.75rem);
+  --text-h3: clamp(1.125rem, 3vw, 1.625rem);
   --text-body-lg: 1.125rem;
   --text-body: 1rem;
   --text-small: 0.875rem;
@@ -72,11 +71,11 @@
   --space-4xl: 6rem;
   --space-5xl: 8rem;
 
-  /* Layout */
+  /* Layout — sharp, disciplined corners rather than soft/bubbly */
   --container-max: 1280px;
-  --radius-card: 16px;
-  --radius-button: 12px;
-  --radius-pill: 999px;
+  --radius-card: 2px;
+  --radius-button: 2px;
+  --radius-pill: 2px;
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -138,8 +137,9 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
@@ -199,12 +199,16 @@ h4 {
 }
 
 .section--dark,
-.section--void {
+.section--void,
+.section--light,
+.section--cloud {
   position: relative;
 }
 
 .section--dark::before,
-.section--void::before {
+.section--void::before,
+.section--light::before,
+.section--cloud::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -230,14 +234,28 @@ h4 {
 
 /* ---------- Typography utilities ---------- */
 .eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
   font-family: var(--font-mono);
   font-size: var(--text-label);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-electric);
+  color: var(--color-ink-muted);
   margin-bottom: var(--space-md);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 1.4em;
+  height: 1px;
+  background: var(--color-electric);
+}
+
+.section--dark .eyebrow,
+.section--void .eyebrow {
+  color: var(--color-mist);
 }
 
 .section-header {

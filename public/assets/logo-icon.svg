@@ -2,8 +2,8 @@
   <title id="mtsLogoTitle">Mindful Tech Solutions</title>
   <defs>
     <linearGradient id="mtsGradient" x1="14" y1="14" x2="86" y2="86" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00d4ff"/>
-      <stop offset="1" stop-color="#7c3aed"/>
+      <stop offset="0" stop-color="#faf9f6"/>
+      <stop offset="1" stop-color="#c7c5bd"/>
     </linearGradient>
   </defs>
 

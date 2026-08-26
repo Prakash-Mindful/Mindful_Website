@@ -4,7 +4,7 @@
 
 /* ---------- Navigation ---------- */
 .nav {
-  --nav-tint: rgba(10, 10, 15, 0.55);
+  --nav-tint: rgba(13, 13, 12, 0.55);
   position: fixed;
   top: 0;
   left: 0;
@@ -14,27 +14,26 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-md) var(--space-lg);
-  backdrop-filter: blur(var(--blur-glass)) saturate(140%);
-  border-bottom: 1px solid transparent;
-  background-image: linear-gradient(var(--nav-tint), var(--nav-tint)),
-    linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.25) 50%, transparent);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  backdrop-filter: blur(var(--blur-glass));
+  background-color: var(--nav-tint);
+  border-bottom: 1px solid var(--border-dark);
   box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0);
-  transition: box-shadow var(--duration-hover) var(--ease-out);
+  transition: background-color var(--duration-hover) var(--ease-out), box-shadow var(--duration-hover) var(--ease-out);
 }
 
 .nav--scrolled {
-  --nav-tint: rgba(8, 8, 13, 0.88);
-  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
+  --nav-tint: rgba(10, 10, 9, 0.92);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.4);
 }
 
 .nav__logo {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.1rem;
+  letter-spacing: -0.01em;
   color: var(--color-snow);
 }
 
@@ -204,12 +203,12 @@ body.no-scroll {
   position: relative;
   background: var(--gradient-accent);
   color: var(--color-snow);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 4px 14px -4px rgba(124, 58, 237, 0.5);
+  box-shadow: var(--shadow-glow);
 }
 
 .btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), var(--shadow-glow);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(13, 13, 12, 0.15), 0 16px 28px -10px rgba(217, 89, 28, 0.4);
 }
 
 .btn--primary:active {
@@ -220,19 +219,19 @@ body.no-scroll {
 
 .btn--secondary {
   background: transparent;
-  border: 1px solid var(--color-electric);
-  color: var(--color-electric);
+  border: 1px solid rgba(250, 249, 246, 0.35);
+  color: var(--color-snow);
 }
 
 .btn--secondary:hover {
-  background: rgba(0, 212, 255, 0.08);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px -6px rgba(0, 212, 255, 0.35);
+  background: rgba(250, 249, 246, 0.06);
+  border-color: rgba(250, 249, 246, 0.6);
+  transform: translateY(-1px);
 }
 
 .btn--secondary:active {
   transform: translateY(0);
-  background: rgba(0, 212, 255, 0.14);
+  background: rgba(250, 249, 246, 0.1);
 }
 
 .btn--ghost {
@@ -264,7 +263,7 @@ body.no-scroll {
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.008);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-card-hover);
   border-color: var(--border-light-hover);
 }
@@ -283,9 +282,8 @@ body.no-scroll {
 }
 
 .card--glass {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--color-slate);
   border: 1px solid var(--border-dark);
-  backdrop-filter: blur(var(--blur-glass));
   color: var(--color-snow);
   box-shadow: var(--shadow-card-dark);
 }
@@ -293,24 +291,28 @@ body.no-scroll {
 .card__icon {
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-button);
+  border: 1px solid var(--border-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-accent);
-  color: var(--color-snow);
+  color: var(--color-ink);
   margin-bottom: var(--space-lg);
-  box-shadow: 0 6px 16px -4px rgba(124, 58, 237, 0.45);
-  transition: transform var(--duration-hover) var(--ease-spring);
+  transition: border-color var(--duration-hover) var(--ease-out);
+}
+
+.card--dark .card__icon,
+.card--glass .card__icon {
+  border-color: var(--border-dark);
+  color: var(--color-snow);
 }
 
 .card:hover .card__icon {
-  transform: scale(1.08) rotate(-4deg);
+  border-color: var(--color-electric);
 }
 
 .card__icon svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
 .card h3 {
@@ -339,8 +341,8 @@ body.no-scroll {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 1px solid var(--border-dark);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--color-electric);
+  background: transparent;
+  color: var(--color-mist);
 }
 
 .badge--coming-soon {

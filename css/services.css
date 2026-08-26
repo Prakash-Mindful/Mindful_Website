@@ -63,6 +63,6 @@
 
 .service-block__list svg {
   flex-shrink: 0;
-  color: var(--color-electric);
+  color: var(--color-success);
   margin-top: 2px;
 }
