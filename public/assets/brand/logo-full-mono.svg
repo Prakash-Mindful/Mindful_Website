@@ -1,0 +1,16 @@
+<svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mtsFullMonoTitle">
+  <title id="mtsFullMonoTitle">Mindful Tech Solutions</title>
+
+  <g transform="translate(2,10)" fill="none" stroke="#1a1a1a">
+    <path d="M64.37 19.19 A34 34 0 1 1 35.63 19.19" stroke-width="6" stroke-linecap="round"/>
+    <polyline points="34,64 34,38 50,52 66,38 66,64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="34" cy="64" r="4.4" fill="#1a1a1a" stroke="none"/>
+    <circle cx="34" cy="38" r="4.4" fill="#1a1a1a" stroke="none"/>
+    <circle cx="50" cy="52" r="4.4" fill="#1a1a1a" stroke="none"/>
+    <circle cx="66" cy="38" r="4.4" fill="#1a1a1a" stroke="none"/>
+    <circle cx="66" cy="64" r="4.4" fill="#1a1a1a" stroke="none"/>
+  </g>
+
+  <text x="120" y="60" font-family="'Poppins','Segoe UI',system-ui,sans-serif" font-size="34" font-weight="600" fill="#1a1a1a">Mindful Tech Solutions</text>
+  <text x="121" y="82" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12.5" letter-spacing="3" fill="#1a1a1a">AI PRODUCTS &amp; CUSTOM IT SOLUTIONS</text>
+</svg>

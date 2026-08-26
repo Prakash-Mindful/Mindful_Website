@@ -1,0 +1,22 @@
+<svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mtsFullLightTitle">
+  <title id="mtsFullLightTitle">Mindful Tech Solutions</title>
+  <defs>
+    <linearGradient id="mtsGradL" x1="10" y1="6" x2="90" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00a8d4"/>
+      <stop offset="1" stop-color="#5b26c4"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(2,10)">
+    <path d="M64.37 19.19 A34 34 0 1 1 35.63 19.19" fill="none" stroke="url(#mtsGradL)" stroke-width="6" stroke-linecap="round"/>
+    <polyline points="34,64 34,38 50,52 66,38 66,64" fill="none" stroke="url(#mtsGradL)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="34" cy="64" r="4.4" fill="url(#mtsGradL)"/>
+    <circle cx="34" cy="38" r="4.4" fill="url(#mtsGradL)"/>
+    <circle cx="50" cy="52" r="4.4" fill="url(#mtsGradL)"/>
+    <circle cx="66" cy="38" r="4.4" fill="url(#mtsGradL)"/>
+    <circle cx="66" cy="64" r="4.4" fill="url(#mtsGradL)"/>
+  </g>
+
+  <text x="120" y="60" font-family="'Poppins','Segoe UI',system-ui,sans-serif" font-size="34" font-weight="600" fill="#12141a">Mindful Tech Solutions</text>
+  <text x="121" y="82" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="12.5" letter-spacing="3" fill="#5c6270">AI PRODUCTS &amp; CUSTOM IT SOLUTIONS</text>
+</svg>

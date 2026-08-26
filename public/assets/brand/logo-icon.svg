@@ -1,0 +1,20 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mtsIconTitle">
+  <title id="mtsIconTitle">Mindful Tech Solutions</title>
+  <defs>
+    <linearGradient id="mtsGradient" x1="14" y1="14" x2="86" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00b8e6"/>
+      <stop offset="1" stop-color="#6a2fd8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Open ring: circuit-board trace with one intentional break -->
+  <path d="M64.37 19.19 A34 34 0 1 1 35.63 19.19" fill="none" stroke="url(#mtsGradient)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Five-node "M": brand initial rendered as a small AI network -->
+  <polyline points="34,64 34,38 50,52 66,38 66,64" fill="none" stroke="url(#mtsGradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="34" cy="64" r="4.4" fill="url(#mtsGradient)"/>
+  <circle cx="34" cy="38" r="4.4" fill="url(#mtsGradient)"/>
+  <circle cx="50" cy="52" r="4.4" fill="url(#mtsGradient)"/>
+  <circle cx="66" cy="38" r="4.4" fill="url(#mtsGradient)"/>
+  <circle cx="66" cy="64" r="4.4" fill="url(#mtsGradient)"/>
+</svg>
