@@ -195,6 +195,13 @@
   background: rgba(34, 211, 238, 0.05);
 }
 
+.card__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
 /* ---------- Timeline ---------- */
 .timeline {
   position: relative;

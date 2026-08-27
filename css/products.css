@@ -18,6 +18,21 @@
   margin-inline: auto;
 }
 
+.product-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.product-detail__status {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
 .product-detail {
   padding-block: var(--space-3xl);
   border-bottom: 1px solid var(--border-light);
