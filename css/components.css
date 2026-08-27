@@ -79,8 +79,8 @@
 .nav__link {
   position: relative;
   font-size: var(--text-small);
-  font-weight: 500;
-  color: var(--color-ink-muted);
+  font-weight: 600;
+  color: var(--color-ink);
   padding-block: var(--space-xs);
   transition: color var(--duration-fast);
 }
