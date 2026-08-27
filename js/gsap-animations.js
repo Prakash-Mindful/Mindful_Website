@@ -14,10 +14,13 @@ function initReveals() {
     return;
   }
 
+  const productCards = allReveal.filter((el) => el.classList.contains('product-card'));
   const cardReveal = allReveal.filter(
     (el) => el.classList.contains('card') || el.classList.contains('industry-card')
   );
-  const plainReveal = allReveal.filter((el) => !cardReveal.includes(el));
+  const plainReveal = allReveal.filter(
+    (el) => !cardReveal.includes(el) && !productCards.includes(el)
+  );
 
   if (plainReveal.length) {
     gsap.set(plainReveal, { opacity: 0, y: 30 });
@@ -57,6 +60,36 @@ function initReveals() {
           stagger: 0.1,
           overwrite: true,
         }),
+    });
+  }
+
+  // Product cards: 3D flip-in with stagger, using data-product-index for order
+  if (productCards.length) {
+    gsap.set(productCards, {
+      opacity: 0,
+      y: 50,
+      rotateX: -12,
+      transformPerspective: 900,
+      transformOrigin: '50% 110%',
+    });
+    ScrollTrigger.batch(productCards, {
+      start: 'top 88%',
+      once: true,
+      onEnter: (batch) => {
+        // Sort by data-product-index so order is always correct
+        const sorted = [...batch].sort(
+          (a, b) => Number(a.dataset.productIndex || 0) - Number(b.dataset.productIndex || 0)
+        );
+        gsap.to(sorted, {
+          opacity: 1,
+          y: 0,
+          rotateX: 0,
+          duration: 0.9,
+          ease: 'back.out(1.4)',
+          stagger: 0.15,
+          overwrite: true,
+        });
+      },
     });
   }
 }

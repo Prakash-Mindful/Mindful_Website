@@ -107,60 +107,141 @@
     </section>
 
     <!-- 2. Product Umbrella -->
-    <section class="section section--light">
+    <section class="section section--light" id="products">
       <div class="container">
         <div class="section-header reveal">
           <span class="eyebrow">Our Products</span>
           <h2>AI-native products for industries ready to evolve</h2>
+          <p class="section-header__sub">We build vertical SaaS products that replace manual workflows with intelligent, automated systems.</p>
         </div>
 
-        <div class="grid grid--4 product-grid">
-          <article class="card reveal">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"/><path d="M5 7v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7"/><path d="M10 12h4"/></svg>
+        <div class="product-grid">
+
+          <!-- RestOps 360 -->
+          <article class="product-card product-card--restops reveal" data-product-index="0">
+            <div class="product-card__glow"></div>
+            <div class="product-card__header">
+              <div class="product-card__icon product-icon--float">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3z"/><path d="M5 7v13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7"/><path d="M10 12h4"/></svg>
+              </div>
+              <span class="product-card__tag">Restaurant Intelligence</span>
             </div>
-            <h3>RestOps 360</h3>
-            <p>Restaurant ops intelligence — inventory, ordering, and supplier visibility in one dashboard.</p>
-            <div class="card__links">
-              <a href="/products.html#restops-360" class="btn btn--ghost">Learn More &rarr;</a>
-              <a href="https://www.restops-360.com/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Visit Website &#8599;</a>
+            <h3 class="product-card__name">RestOps 360</h3>
+            <p class="product-card__desc">Restaurant ops intelligence — inventory, ordering, and supplier visibility in one dashboard.</p>
+            <div class="product-card__stats">
+              <div class="stat"><span class="stat__num" data-count-to="3200" data-count-suffix="+">0+</span><span class="stat__label">Orders Automated</span></div>
+              <div class="stat"><span class="stat__num" data-count-to="40" data-count-suffix="%">0%</span><span class="stat__label">Cost Reduction</span></div>
+              <div class="stat"><span class="stat__num" data-count-to="98" data-count-suffix="%">0%</span><span class="stat__label">Stock Accuracy</span></div>
+            </div>
+            <div class="product-card__features">
+              <span>Automated Purchasing</span>
+              <span>Real-Time Food Costing</span>
+              <span>Supplier Sync</span>
+            </div>
+            <div class="product-card__preview">
+              <div class="dashboard-mock dashboard-mock--restops">
+                <div class="dash-bar"><span></span><span></span><span></span></div>
+                <div class="dash-row">
+                  <div class="dash-chart"></div>
+                  <div class="dash-metrics"><div></div><div></div><div></div></div>
+                </div>
+                <div class="dash-table"><div></div><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="/products.html#restops-360" class="btn btn--product-primary">Learn More &rarr;</a>
+              <a href="https://www.restops-360.com/" target="_blank" rel="noopener noreferrer" class="btn btn--product-ghost">Visit Website &#8599;</a>
             </div>
           </article>
 
-          <article class="card reveal">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+          <!-- Proforma OS -->
+          <article class="product-card product-card--proforma reveal" data-product-index="1">
+            <div class="product-card__glow"></div>
+            <div class="product-card__header">
+              <div class="product-card__icon product-icon--float" style="--float-delay: 0.7s">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+              </div>
+              <span class="product-card__tag">Real Estate Planning</span>
             </div>
-            <h3>Proforma OS</h3>
-            <p>Real estate planning — budgeting, forecasting, and deal visibility for every project.</p>
-            <div class="card__links">
-              <a href="/products.html#proforma-os" class="btn btn--ghost">Learn More &rarr;</a>
-              <a href="https://www.proformaos.ai/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Visit Website &#8599;</a>
+            <h3 class="product-card__name">Proforma OS</h3>
+            <p class="product-card__desc">Real estate planning — budgeting, forecasting, and deal visibility for every project.</p>
+            <div class="product-card__stats">
+              <div class="stat"><span class="stat__num" data-count-to="48" data-count-suffix="M+">0</span><span class="stat__label">Deals Tracked</span></div>
+              <div class="stat"><span class="stat__num" data-count-to="60" data-count-suffix="%">0%</span><span class="stat__label">Faster Budgeting</span></div>
+              <div class="stat"><span class="stat__num" data-count-to="120" data-count-suffix="+">0</span><span class="stat__label">Projects Managed</span></div>
+            </div>
+            <div class="product-card__features">
+              <span>AI Deal Underwriting</span>
+              <span>Cash Flow Projections</span>
+              <span>Capex Tracking</span>
+            </div>
+            <div class="product-card__preview">
+              <div class="dashboard-mock dashboard-mock--proforma">
+                <div class="dash-bar"><span></span><span></span><span></span></div>
+                <div class="dash-row">
+                  <div class="dash-chart dash-chart--line"></div>
+                  <div class="dash-metrics"><div></div><div></div><div></div></div>
+                </div>
+                <div class="dash-table"><div></div><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="/products.html#proforma-os" class="btn btn--product-primary">Learn More &rarr;</a>
+              <a href="https://www.proformaos.ai/" target="_blank" rel="noopener noreferrer" class="btn btn--product-ghost">Visit Website &#8599;</a>
             </div>
           </article>
 
-          <article class="card reveal">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+          <!-- Crew OS -->
+          <article class="product-card product-card--crew reveal" data-product-index="2">
+            <div class="product-card__glow"></div>
+            <div class="product-card__header">
+              <div class="product-card__icon product-icon--float" style="--float-delay: 1.4s">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <span class="product-card__tag">HR &amp; Workforce AI</span>
             </div>
-            <h3>Crew OS</h3>
-            <p>HR &amp; workforce management — onboarding, records, and task workflows, unified.</p>
-            <div class="card__links">
-              <a href="/products.html#crew-os" class="btn btn--ghost">Learn More &rarr;</a>
+            <h3 class="product-card__name">Crew OS</h3>
+            <p class="product-card__desc">HR &amp; workforce management — onboarding, records, and task workflows, unified.</p>
+            <div class="product-card__stats">
+              <div class="stat"><span class="stat__num" data-count-to="500" data-count-suffix="+">0</span><span class="stat__label">Workflows Active</span></div>
+              <div class="stat"><span class="stat__num" data-count-to="75" data-count-suffix="%">0%</span><span class="stat__label">Onboarding Faster</span></div>
+              <div class="stat"><span class="stat__num" data-count-to="99" data-count-suffix="%">0%</span><span class="stat__label">Compliance Rate</span></div>
+            </div>
+            <div class="product-card__features">
+              <span>Smart Onboarding</span>
+              <span>Skill-Match Scheduling</span>
+              <span>Payroll Prep</span>
+            </div>
+            <div class="product-card__preview">
+              <div class="dashboard-mock dashboard-mock--crew">
+                <div class="dash-bar"><span></span><span></span><span></span></div>
+                <div class="dash-avatars"><div></div><div></div><div></div><div></div><div></div></div>
+                <div class="dash-table"><div></div><div></div><div></div><div></div></div>
+              </div>
+            </div>
+            <div class="product-card__links">
+              <a href="/products.html#crew-os" class="btn btn--product-primary">Learn More &rarr;</a>
             </div>
           </article>
 
-          <article class="card card--coming-soon reveal">
-            <div class="card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          <!-- Coming Soon -->
+          <article class="product-card product-card--coming reveal" data-product-index="3">
+            <div class="product-card__coming-border"></div>
+            <div class="product-card__header">
+              <div class="product-card__icon product-icon--pulse">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+              </div>
+              <span class="product-card__tag product-card__tag--incubator">In Incubator</span>
             </div>
-            <h3>Coming Soon</h3>
-            <p>More AI-native products are in development. Get in touch to hear what's next.</p>
-            <span class="badge badge--coming-soon">In Development</span>
+            <h3 class="product-card__name">More Coming</h3>
+            <p class="product-card__desc">More AI-native products are in development. Get in touch to hear what's next or suggest a vertical.</p>
+            <a href="/contact.html" class="btn btn--product-early">Request Early Access &rarr;</a>
           </article>
+
         </div>
       </div>
     </section>
+
 
     <!-- 3. AI Automation Core -->
     <section class="section section--void">
