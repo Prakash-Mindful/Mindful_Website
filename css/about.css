@@ -5,14 +5,14 @@
 }
 
 .about-hero h1 {
-  color: var(--color-snow);
+  color: var(--color-navy);
   font-size: var(--text-h1);
   max-width: 760px;
   margin-bottom: var(--space-md);
 }
 
 .about-hero p {
-  color: var(--color-mist);
+  color: var(--color-ink-muted);
   font-size: var(--text-body-lg);
   max-width: 640px;
 }

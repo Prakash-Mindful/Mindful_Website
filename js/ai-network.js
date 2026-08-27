@@ -35,7 +35,7 @@ function initAiNetwork() {
     const w = canvas.offsetWidth;
     const h = canvas.offsetHeight;
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = 'rgba(250, 249, 246, 0.4)';
+    ctx.fillStyle = 'rgba(30, 58, 138, 0.35)';
     nodes.forEach((n) => {
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
@@ -68,8 +68,8 @@ function initAiNetwork() {
 
     if (pointer.active) {
       const glow = ctx.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, REPEL_RADIUS + 60);
-      glow.addColorStop(0, 'rgba(217, 89, 28, 0.1)');
-      glow.addColorStop(1, 'rgba(217, 89, 28, 0)');
+      glow.addColorStop(0, 'rgba(34, 211, 238, 0.12)');
+      glow.addColorStop(1, 'rgba(34, 211, 238, 0)');
       ctx.fillStyle = glow;
       ctx.fillRect(0, 0, w, h);
     }
@@ -90,10 +90,10 @@ function initAiNetwork() {
           const base = 1 - dist / LINK_DISTANCE;
           const t = Math.max(a.illum, b.illum);
           const boost = 1 + t * 1.4;
-          const r = Math.round(250 - (250 - 217) * t);
-          const g = Math.round(249 - (249 - 89) * t);
-          const bch = Math.round(246 - (246 - 28) * t);
-          ctx.strokeStyle = `rgba(${r}, ${g}, ${bch}, ${Math.min(base * 0.25 * boost, 0.75)})`;
+          const r = Math.round(30 + (34 - 30) * t);
+          const g = Math.round(58 + (211 - 58) * t);
+          const bch = Math.round(138 + (238 - 138) * t);
+          ctx.strokeStyle = `rgba(${r}, ${g}, ${bch}, ${Math.min(base * 0.3 * boost, 0.75)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -104,10 +104,10 @@ function initAiNetwork() {
     }
 
     rendered.forEach((n) => {
-      const alpha = Math.min(0.45 + n.illum * 0.5, 1);
-      const r = Math.round(250 - (250 - 217) * n.illum);
-      const g = Math.round(249 - (249 - 89) * n.illum);
-      const b = Math.round(246 - (246 - 28) * n.illum);
+      const alpha = Math.min(0.35 + n.illum * 0.5, 1);
+      const r = Math.round(30 + (34 - 30) * n.illum);
+      const g = Math.round(58 + (211 - 58) * n.illum);
+      const b = Math.round(138 + (238 - 138) * n.illum);
       ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r + n.illum * 1.2, 0, Math.PI * 2);

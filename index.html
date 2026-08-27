@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" /></noscript>
   <title>Mindful Tech Solutions — AI Products &amp; Custom IT Solutions</title>
   <meta name="description" content="Mindful Tech Solutions builds AI-native SaaS products and custom IT solutions — RestOps 360, Proforma OS, Crew OS, and agentic automation for modern operations." />
   <link rel="canonical" href="https://mindfultechsol.com/" />
@@ -27,8 +27,7 @@
 <body>
   <header class="nav">
     <a href="/" class="nav__logo">
-      <img src="/assets/logo-icon.svg" alt="" width="32" height="32" />
-      Mindful Tech Solutions
+      <img src="/assets/mindful-tech-logo.png" alt="Mindful Tech Solutions" class="nav__logo-img" />
     </a>
 
     <nav class="nav__links" aria-label="Primary">
@@ -84,19 +83,23 @@
   <main>
     <!-- 1. Hero -->
     <section class="hero">
-      <canvas class="hero__canvas" data-ai-network aria-hidden="true"></canvas>
-      <div class="hero__content container">
-        <span class="badge">// Parent Company &middot; AI Products &middot; Custom IT</span>
-        <h1 class="hero__headline">
-          <span data-typewriter>AI-powered products &amp; custom IT solutions — under one roof.</span>
-        </h1>
-        <p class="hero__subtext">
-          Mindful Tech Solutions builds SaaS products, intelligent automation systems, and custom technology
-          platforms that replace outdated workflows with faster, smarter operations.
-        </p>
-        <div class="hero__actions">
-          <a href="/products.html" class="btn btn--primary btn--pulse">Explore Products</a>
-          <a href="/contact.html" class="btn btn--secondary">Build a Custom Solution</a>
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__split">
+        <!-- Left side: 3D emblem via background image, right side: text panel -->
+        <div class="hero__emblem-side" aria-hidden="true"></div>
+        <div class="hero__text-side">
+          <span class="hero__badge">Intelligent Technology, Mindfully Applied</span>
+          <h1 class="hero__headline">
+            <span data-typewriter>AI-powered products &amp; custom IT solutions — under one roof.</span>
+          </h1>
+          <p class="hero__subtext">
+            Mindful Tech Solutions builds SaaS products, intelligent automation systems, and custom technology
+            platforms that replace outdated workflows with faster, smarter operations.
+          </p>
+          <div class="hero__actions">
+            <a href="/products.html" class="btn btn--hero-primary btn--pulse">Explore Products</a>
+            <a href="/contact.html" class="btn btn--hero-secondary">Build a Custom Solution</a>
+          </div>
         </div>
       </div>
     </section>
@@ -343,7 +346,7 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <p class="footer__brand"><img src="/assets/logo-icon.svg" alt="" width="22" height="22" /> Mindful Tech Solutions</p>
+          <p class="footer__brand"><img src="/assets/mindful-tech-logo.png" alt="Mindful Tech Solutions" class="footer__logo-img" /></p>
           <p>Any IT challenge. One mindful solution.</p>
         </div>
         <div>
@@ -370,9 +373,8 @@
   </footer>
 
   <script type="module" src="/js/main.js"></script>
-  <script type="module" src="/js/ai-network.js"></script>
   <script type="module" src="/js/typewriter.js"></script>
-  <script type="module" src="/js/counter.js"></script>
-  <script type="module" src="/js/timeline.js"></script>
+  <script type="module" src="/js/hero-animations.js"></script>
+  <script type="module" src="/js/gsap-animations.js"></script>
 </body>
 </html>

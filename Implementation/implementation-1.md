@@ -4,8 +4,10 @@
 
 Transform Mindful Tech Solutions from a generic IT consulting website into a **world-class AI product company platform** — positioning it as the parent brand behind AI-powered SaaS products (RestOps 360, Proforma OS, Crew OS) while maintaining its custom IT solutions business.
 
-**Tagline**: *"Any IT challenge. One mindful solution."*
+**Company Tagline**: *"Intelligent Technology, Mindfully Applied"*
 **Hero Headline**: *"AI-powered products & custom IT solutions — under one roof."*
+
+**Logo**: New tech-forward emblem saved at [`assets/images/mindful-tech-logo.png`](file:///Users/vmvaraprakash/Mindful%20Website%20UI/assets/images/mindful-tech-logo.png) — features a circular metallic blue/cyan emblem with circuit board traces, stylized "M" lettermark, and upward arrow. The logo's blue/cyan color scheme naturally reinforces the Midnight Aurora design palette.
 
 ---
 
@@ -56,7 +58,7 @@ A hybrid palette: dark hero/header sections transitioning into light content are
 | `--color-snow` | `#ffffff` | Pure white text / light cards |
 | `--color-electric` | `#00d4ff` | Primary AI accent — cyan glow |
 | `--color-neon` | `#7c3aed` | Secondary accent — purple/violet |
-| `--color-ember` | `#ff6b2b` | Brand accent — evolved orange (connects to logo) |
+| `--color-ember` | `#ff6b2b` | Brand accent — warm contrast accent |
 | `--color-success` | `#22c55e` | Positive states, product status |
 | `--color-gradient-hero` | `linear-gradient(135deg, #0a0a0f 0%, #1a1035 50%, #0a0a0f 100%)` | Hero background |
 | `--color-gradient-accent` | `linear-gradient(135deg, #00d4ff, #7c3aed)` | CTA buttons, highlights |
@@ -155,7 +157,7 @@ Services Dropdown:
 - **Headline**: Typewriter effect: *"AI-powered products & custom IT solutions — under one roof."*
 - **Subtext**: "Mindful Tech Solutions builds SaaS products, intelligent automation systems, and custom technology platforms that replace outdated workflows with faster, smarter operations."
 - **CTAs**: "Explore Products" (primary, pulse) + "Build a Custom Solution" (secondary)
-- **Badge**: Small label above headline: `// PARENT COMPANY · AI PRODUCTS · CUSTOM IT`
+- **Badge**: Small label above headline: `// INTELLIGENT TECHNOLOGY, MINDFULLY APPLIED`
 
 ### 2. Product Umbrella Section (Light Background)
 - **Eyebrow**: "OUR PRODUCTS"
@@ -267,8 +269,9 @@ Services Dropdown:
 │   ├── timeline.js               # Process timeline scroll animation
 │   └── mobile-nav.js             # Mobile navigation
 ├── assets/
-│   ├── logo.png                  # Mindful Tech logo (existing)
-│   ├── products/                 # Generated product mockup images
+│   ├── images/
+│   │   ├── mindful-tech-logo.png # New Mindful Tech logo (circuit emblem + wordmark)
+│   │   └── products/             # Generated product mockup images
 │   └── icons/                    # SVG icons
 ├── vite.config.js                # Vite configuration
 ├── package.json                  # Dependencies
@@ -358,8 +361,8 @@ Generated using the image generation tool — dashboard-style UI previews for Re
 
 ## User Review Required
 
-> [!IMPORTANT]
-> **Logo**: We'll use the existing Mindful Tech Solutions logo. Please confirm you can provide the logo file, or I'll extract it from the current site.
+> [!NOTE]
+> **Logo**: ✅ New logo saved at [`assets/images/mindful-tech-logo.png`](file:///Users/vmvaraprakash/Mindful%20Website%20UI/assets/images/mindful-tech-logo.png). Features the metallic blue circuit emblem with "Mindful Tech Solutions" wordmark and "INTELLIGENT TECHNOLOGY, MINDFULLY APPLIED" tagline.
 
 > [!IMPORTANT]
 > **Testimonials / Client Logos**: Do you have any client testimonials or logos we should include in the social proof section? If not, we'll use metrics-only for v1.

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 0 68 68" role="img" aria-labelledby="mtsLogoTitle">
-  <title id="mtsLogoTitle">Mindful Tech Solutions</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 0 68 68" role="img" aria-labelledby="mtsOfficialIconTitle">
+  <title id="mtsOfficialIconTitle">Mindful Tech Solutions</title>
   <defs>
     <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="mtsRing">
       <stop stop-color="#B0C4DE" offset="0%"/>

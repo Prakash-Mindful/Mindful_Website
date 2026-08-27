@@ -1,53 +1,52 @@
 /* ==========================================================================
    Mindful Tech Solutions — Design System
-   Tokens, reset, and utility classes. Monochrome studio palette, one accent.
+   Tokens, reset, and utility classes. Brand system: navy + cyan, light-first.
    ========================================================================== */
 
 :root {
-  /* Color — dark surfaces (warm near-black, not cold navy) */
-  --color-void: #0d0d0c;
-  --color-obsidian: #141412;
-  --color-slate: #1c1c19;
-  --color-steel: #333229;
-  --color-mist: #9a988e;
+  /* Color — dark surfaces (brand navy, not black) */
+  --color-void: #14205c;
+  --color-obsidian: #1a2c72;
+  --color-slate: #223785;
+  --color-steel: #35479a;
+  --color-mist: #b7c2e6;
 
-  /* Color — light surfaces (warm paper, not stark white) */
-  --color-cloud: #efeee8;
-  --color-snow: #faf9f6;
-  --color-ink: #100f0d;
-  --color-ink-muted: #6b6a63;
-  --color-border-light: rgba(13, 13, 12, 0.12);
+  /* Color — light surfaces */
+  --color-cloud: #f2f5fa;
+  --color-snow: #ffffff;
+  --color-ink: #2b3648;
+  --color-ink-muted: #64748b;
+  --color-border-light: rgba(30, 58, 138, 0.12);
 
-  /* Color — single restrained accent (used sparingly, per the brief) */
-  --color-electric: #d9591c;
-  --color-neon: #d9591c;
-  --color-ember: #d9591c;
+  /* Color — brand accent (cyan) */
+  --color-electric: #22d3ee;
+  --color-neon: #22d3ee;
+  --color-ember: #22d3ee;
+  --color-navy: #1e3a8a;
   --color-success: #22c55e;
 
-  /* Gradients — tonal only, never a second hue */
-  --gradient-hero: linear-gradient(135deg, #0d0d0c 0%, #1c1a16 50%, #0d0d0c 100%);
-  --gradient-accent: linear-gradient(135deg, #e2661f, #c14a12);
-  --gradient-ember: linear-gradient(135deg, #e2661f, #c14a12);
+  /* Gradients */
+  --gradient-hero: radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.08) 0%, rgba(255, 255, 255, 0) 60%), #ffffff;
+  --gradient-accent: linear-gradient(135deg, #22d3ee, #0891b2);
+  --gradient-button: linear-gradient(135deg, #0ea5c4, #1e3a8a);
+  --gradient-ember: linear-gradient(135deg, #22d3ee, #1e3a8a);
 
   /* Borders / glass */
-  --border-dark: rgba(250, 249, 246, 0.1);
-  --border-light: rgba(13, 13, 12, 0.1);
-  --border-dark-hover: rgba(217, 89, 28, 0.5);
-  --border-light-hover: rgba(217, 89, 28, 0.45);
+  --border-dark: rgba(255, 255, 255, 0.14);
+  --border-light: rgba(30, 58, 138, 0.12);
+  --border-dark-hover: rgba(34, 211, 238, 0.5);
+  --border-light-hover: rgba(34, 211, 238, 0.5);
 
-  /* Shadows — flat and quiet; hairlines carry the structure, not blur */
-  --shadow-card: 0 1px 2px rgba(13, 13, 12, 0.04);
-  --shadow-card-hover: 0 2px 4px rgba(13, 13, 12, 0.06), 0 16px 32px -16px rgba(13, 13, 12, 0.18);
-  --shadow-card-dark: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-card-dark-hover: 0 2px 4px rgba(0, 0, 0, 0.25), 0 16px 32px -16px rgba(0, 0, 0, 0.35);
-  --shadow-glow: 0 1px 2px rgba(13, 13, 12, 0.15), 0 12px 24px -10px rgba(217, 89, 28, 0.35);
+  /* Shadows — soft, navy-tinted; cards lift off the page, not flat */
+  --shadow-card: 0 2px 8px rgba(30, 58, 138, 0.06), 0 8px 24px -8px rgba(30, 58, 138, 0.1);
+  --shadow-card-hover: 0 4px 12px rgba(30, 58, 138, 0.08), 0 20px 40px -12px rgba(30, 58, 138, 0.18);
+  --shadow-card-dark: 0 4px 16px rgba(10, 15, 40, 0.25);
+  --shadow-card-dark-hover: 0 8px 24px rgba(10, 15, 40, 0.3), 0 0 32px -8px rgba(34, 211, 238, 0.25);
+  --shadow-glow: 0 2px 8px rgba(14, 116, 144, 0.25), 0 8px 28px -6px rgba(34, 211, 238, 0.55);
   --blur-glass: 20px;
 
-  /* Subtle film-grain — paper texture, fits the editorial direction */
-  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-
-  /* Typography — an expanded grotesk for display, quiet workhorse for body */
-  --font-display: 'Archivo', system-ui, sans-serif;
+  /* Typography — friendly geometric display, quiet workhorse for body */
+  --font-display: 'Poppins', system-ui, sans-serif;
   --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
@@ -71,11 +70,11 @@
   --space-4xl: 6rem;
   --space-5xl: 8rem;
 
-  /* Layout — sharp, disciplined corners rather than soft/bubbly */
+  /* Layout — rounded, friendly corners */
   --container-max: 1280px;
-  --radius-card: 2px;
-  --radius-button: 2px;
-  --radius-pill: 2px;
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-pill: 999px;
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -198,26 +197,6 @@ h4 {
   color: var(--color-ink);
 }
 
-.section--dark,
-.section--void,
-.section--light,
-.section--cloud {
-  position: relative;
-}
-
-.section--dark::before,
-.section--void::before,
-.section--light::before,
-.section--cloud::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: var(--noise);
-  opacity: 0.025;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-
 .grid {
   display: grid;
   gap: var(--space-xl);
@@ -286,11 +265,13 @@ h4 {
 }
 
 /* ---------- Reveal-on-scroll base state ---------- */
+/* GSAP (js/gsap-animations.js) drives the actual animation from this
+   starting state. The transition-based .is-visible fallback only matters
+   if JS never runs, so scrolling still lands on readable content. */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity var(--duration-base) var(--ease-out),
-    transform var(--duration-base) var(--ease-out);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
 }
 
 .reveal.is-visible {

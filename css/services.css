@@ -6,13 +6,13 @@
 }
 
 .page-hero h1 {
-  color: var(--color-snow);
+  color: var(--color-navy);
   font-size: var(--text-h1);
   margin-bottom: var(--space-md);
 }
 
 .page-hero p {
-  color: var(--color-mist);
+  color: var(--color-ink-muted);
   font-size: var(--text-body-lg);
   max-width: 640px;
   margin-inline: auto;

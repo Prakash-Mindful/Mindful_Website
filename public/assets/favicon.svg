@@ -1,16 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68">
   <defs>
-    <linearGradient id="g" x1="14" y1="14" x2="86" y2="86" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#faf9f6"/>
-      <stop offset="1" stop-color="#c7c5bd"/>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="mtsFaviconRing">
+      <stop stop-color="#B0C4DE" offset="0%"/>
+      <stop stop-color="#4682B4" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="mtsFaviconLine">
+      <stop stop-color="#00CED1" offset="0%"/>
+      <stop stop-color="#4169E1" offset="100%"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="24" fill="#0d0d0c"/>
-  <path d="M67.5 22.4 A28 28 0 1 1 32.5 22.4" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round" transform="translate(0,4)"/>
-  <polyline points="36,66 36,42 50,54 64,42 64,66" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="36" cy="66" r="5" fill="url(#g)"/>
-  <circle cx="36" cy="42" r="5" fill="url(#g)"/>
-  <circle cx="50" cy="54" r="5" fill="url(#g)"/>
-  <circle cx="64" cy="42" r="5" fill="url(#g)"/>
-  <circle cx="64" cy="66" r="5" fill="url(#g)"/>
+  <rect width="68" height="68" rx="16" fill="#14205c"/>
+  <g transform="translate(-30, 0)">
+    <circle stroke="url(#mtsFaviconRing)" stroke-width="4" cx="64" cy="34" r="30" fill="none"/>
+    <path d="M49.1,16.4 C49.1,16.4 54.2,20.1 57.8,26.3 C61.4,32.5 61.7,39.7 61.7,39.7 L61.7,53.7 C61.7,53.7 62.0,49.5 65.7,44.3 C69.5,39.1 77.5,31.6 77.5,31.6 L87.5,16.4 C87.5,16.4 78.6,22.4 73.3,29.0 C68.0,35.6 67.6,44.6 67.6,44.6 L67.6,39.7 C67.6,39.7 67.7,32.9 64.5,27.7 C61.3,22.5 49.1,16.4 49.1,16.4 Z" fill="#20B2AA"/>
+    <path d="M54.4,17.8 C54.4,17.8 55.8,19.2 57.7,21.8 L42.5,39.3 C42.5,39.3 41.2,39.1 40.0,37.7 C38.9,36.3 39.1,32.5 39.1,32.5 L54.4,17.8 Z" fill="#00CED1"/>
+    <path d="M58.2,32.4 C58.2,32.4 57.2,37.7 51.7,41.6 C46.3,45.5 41.6,44.6 41.6,44.6 C41.6,44.6 43.5,40.1 49.0,37.0 C54.6,33.9 58.2,32.4 58.2,32.4 Z" fill="#4169E1"/>
+    <circle fill="#00CED1" cx="53.6" cy="20.6" r="1.7"/>
+    <circle fill="#00CED1" cx="43.0" cy="31.5" r="1.7"/>
+    <circle fill="#00CED1" cx="43.0" cy="35.4" r="1.7"/>
+    <circle fill="#4169E1" cx="67.7" cy="39.7" r="1.7"/>
+  </g>
 </svg>

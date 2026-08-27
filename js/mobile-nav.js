@@ -27,6 +27,11 @@ function initMobileNav() {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
   });
+
+  const desktopQuery = window.matchMedia('(min-width: 1200px)');
+  desktopQuery.addEventListener('change', (e) => {
+    if (e.matches) close();
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initMobileNav);
