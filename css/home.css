@@ -370,35 +370,29 @@
 }
 
 /* ── Stat chips ── */
-.product-card__stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+/* ── Tech stack badges (replaces stats) ── */
+.product-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
   position: relative;
   z-index: 1;
 }
-.stat {
-  text-align: center;
-  background: var(--card-accent-soft);
-  border-radius: 10px;
-  padding: 0.5rem 0.25rem;
-  border: 1px solid color-mix(in srgb, var(--card-accent) 15%, transparent);
-}
-.stat__num {
-  display: block;
+.tech-badge {
   font-family: var(--font-mono, monospace);
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: var(--card-accent-soft);
   color: var(--card-accent);
-  line-height: 1.2;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 25%, transparent);
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.2s;
 }
-.stat__label {
-  display: block;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-ink-muted, #64748b);
-  margin-top: 2px;
+.tech-badge:hover {
+  background: color-mix(in srgb, var(--card-accent) 15%, transparent);
+  transform: translateY(-1px);
 }
 
 /* ── Feature pills ── */
