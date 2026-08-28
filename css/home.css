@@ -640,7 +640,157 @@
 
 
 
+/* ══════════════════════════════════════════════
+   CORE STRENGTH SECTION — Full Animation System
+══════════════════════════════════════════════ */
+
+/* Section wrapper */
+.core-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Aurora background canvas ── */
+.core-aurora {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ── Connection lines canvas ── */
+.core-connections {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ── Cursor-follow glow ── */
+.core-cursor-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34,211,238,0.12) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.core-section:hover .core-cursor-glow { opacity: 1; }
+
+/* ── Core card enhancements ── */
+.core-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.34,1.4,0.64,1),
+              box-shadow 0.35s ease,
+              border-color 0.3s ease;
+}
+
+/* Neon icon glow on hover — accent colour from data-accent via JS inline var */
+.core-card .core-icon {
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  border-radius: 12px;
+}
+.core-card:hover .core-icon {
+  box-shadow: 0 0 20px var(--core-accent, rgba(34,211,238,0.5)),
+              0 0 40px var(--core-accent-soft, rgba(34,211,238,0.2));
+  border-color: var(--core-accent, #22d3ee) !important;
+}
+.core-card:hover .core-icon svg {
+  stroke: var(--core-accent, #22d3ee);
+  filter: drop-shadow(0 0 6px var(--core-accent, #22d3ee));
+}
+
+/* Card glow blob on hover */
+.core-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--core-accent-soft, rgba(34,211,238,0.06)),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.core-card:hover::before { opacity: 1; }
+
+/* Scan-line sweep */
+@keyframes core-scan {
+  0%   { top: -6px; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 0.6; }
+  100% { top: calc(100% + 6px); opacity: 0; }
+}
+.core-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--core-accent, rgba(34,211,238,0.7)),
+    transparent
+  );
+  top: -6px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+}
+.core-card:hover::after {
+  animation: core-scan 2s ease-in-out infinite;
+}
+
+/* ── SVG icon draw-in on scroll entry ── */
+.core-icon svg path,
+.core-icon svg rect,
+.core-icon svg circle,
+.core-icon svg polyline {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.core-card.icon-drawn .core-icon svg path,
+.core-card.icon-drawn .core-icon svg rect,
+.core-card.icon-drawn .core-icon svg circle,
+.core-card.icon-drawn .core-icon svg polyline {
+  stroke-dashoffset: 0;
+}
+
+/* ── Alternating left/right reveal helpers ── */
+.core-card.reveal-from-left  { --reveal-x: -40px; }
+.core-card.reveal-from-right { --reveal-x:  40px; }
+
+/* ── Hover lift ── */
+.core-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 50px -10px rgba(10,15,40,0.5),
+              0 0 30px -5px var(--core-accent-soft, rgba(34,211,238,0.15));
+}
+
+/* ── Content z-index so it sits above pseudo-elements ── */
+.core-card h3,
+.core-card p,
+.core-card .core-icon { position: relative; z-index: 1; }
+
+
 /* ---------- Timeline ---------- */
+
 .timeline {
   position: relative;
   padding-left: var(--space-2xl);

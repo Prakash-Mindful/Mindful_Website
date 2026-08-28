@@ -15,12 +15,15 @@ function initReveals() {
   }
 
   const productCards = allReveal.filter((el) => el.classList.contains('product-card'));
+  const coreCards = allReveal.filter((el) => el.classList.contains('core-card'));
   const cardReveal = allReveal.filter(
-    (el) => el.classList.contains('card') || el.classList.contains('industry-card')
+    (el) => (el.classList.contains('card') || el.classList.contains('industry-card'))
+            && !el.classList.contains('core-card')
   );
   const plainReveal = allReveal.filter(
-    (el) => !cardReveal.includes(el) && !productCards.includes(el)
+    (el) => !cardReveal.includes(el) && !productCards.includes(el) && !coreCards.includes(el)
   );
+
 
   if (plainReveal.length) {
     gsap.set(plainReveal, { opacity: 0, y: 30 });
@@ -92,7 +95,34 @@ function initReveals() {
       },
     });
   }
+
+  // Core cards: alternating left/right reveal
+  if (coreCards.length) {
+    coreCards.forEach((card, i) => {
+      const fromX = i % 2 === 0 ? -40 : 40;
+      gsap.set(card, { opacity: 0, x: fromX, y: 20 });
+    });
+    ScrollTrigger.batch(coreCards, {
+      start: 'top 85%',
+      once: true,
+      onEnter: (batch) => {
+        const sorted = [...batch].sort(
+          (a, b) => Number(a.dataset.coreIndex || 0) - Number(b.dataset.coreIndex || 0)
+        );
+        gsap.to(sorted, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          duration: 0.85,
+          ease: 'power3.out',
+          stagger: 0.15,
+          overwrite: true,
+        });
+      },
+    });
+  }
 }
+
 
 function initHeroIntro() {
   // hero-animations.js handles the full cascade now (slide-in from right)
